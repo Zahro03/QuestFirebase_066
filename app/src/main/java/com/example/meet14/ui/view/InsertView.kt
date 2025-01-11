@@ -10,6 +10,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.meet14.ui.viewModel.FormState
 import com.example.meet14.ui.viewModel.InsertViewModel
 import com.example.meet14.ui.viewModel.PenyediaViewModel
+import kotlinx.coroutines.launch
 
 @Composable
 fun InsertMhsView(
@@ -29,6 +30,9 @@ fun InsertMhsView(
                 println(
                     "InsertMhsView: uiState is FormState.Success,navigate to home" + uiState.message
                 )
+                coroutineScope.launch {
+                    snackbarHostState.showSnackbar(uiState.message)
+                }
             }
         }
     }
