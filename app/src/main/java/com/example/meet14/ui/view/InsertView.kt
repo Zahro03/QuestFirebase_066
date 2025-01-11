@@ -13,5 +13,6 @@ fun InsertMhsView(
     modifier: Modifier = Modifier,
     viewModel: InsertViewModel = viewModel(factory = PenyediaViewModel.Factory)
 ){
-val uiState = viewModel.uiState
+    val uiState = viewModel.uiState
+    val uiEvent = viewModel.uiEvent
 }
