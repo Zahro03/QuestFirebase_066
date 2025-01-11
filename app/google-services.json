@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "746044950240",
+    "project_id": "pamfirebase-e2998",
+    "storage_bucket": "pamfirebase-e2998.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746044950240:android:263bb913a9fe14f3b7b285",
+        "android_client_info": {
+          "package_name": "com.example.meet14"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7iQRn0k4HZvZ4jPnbBeraj9N0r7G9QVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
