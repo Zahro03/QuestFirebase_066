@@ -5,6 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.meet14.model.Mahasiswa
 import com.example.meet14.repository.MahasiswaRepository
 import kotlinx.coroutines.launch
 
@@ -95,5 +96,15 @@ data class MahasiswaEvent(
     val alamat: String = "",
     val kelas: String = "",
     val angkatan: String = ""
+)
+
+// Menyimpan input form ke dalam entity
+fun MahasiswaEvent.toMhsModel(): Mahasiswa = Mahasiswa(
+    nim = nim,
+    nama = nama,
+    jenisKelamin = jenisKelamin,
+    alamat = alamat,
+    kelas = kelas,
+    angkatan = angkatan
 )
 
