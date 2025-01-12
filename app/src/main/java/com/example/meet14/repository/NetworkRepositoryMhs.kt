@@ -38,3 +38,16 @@ class NetworkRepositoryMhs(
             throw Exception("Gagal menambahkan data mahasiswa: ${e.message}")
         }
     }
+
+    override suspend fun updateMahasiswa(mahasiswa: Mahasiswa) {
+        try {
+            firestore.collection("Mahasiswa")
+                .document(mahasiswa.nim)
+                .set(mahasiswa)
+                .await()
+        } catch (e: Exception) {
+            throw Exception("Gagal mengaupdate data mahasiswa:${e.message}")
+        }
+    }
+
+
