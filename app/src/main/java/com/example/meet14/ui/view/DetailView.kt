@@ -53,3 +53,23 @@ fun DetailMhsScreen(
         )
     }
 }
+
+@Composable
+fun DetailStatus(
+    mhsUiState: DetailMhsUiState,
+    retryAction: () -> Unit,
+    modifier: Modifier = Modifier,
+    onEditClick: (String) -> Unit = {},
+){
+    when(mhsUiState){
+        is DetailMhsUiState.Success -> {
+            DetailMhsLayout(
+                mahasiswa = mhsUiState.mahasiswa,
+                modifier = modifier,
+                onEditClick = {onEditClick(it)}
+            )
+        }
+        is DetailMhsUiState.Loading -> OnLoading(modifier = modifier)
+        is DetailMhsUiState.Error -> OnError(retryAction, modifier = modifier)
+    }
+}
